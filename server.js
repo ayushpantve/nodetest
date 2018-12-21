@@ -35,6 +35,14 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    creator: 'AYUSH'
+  });
+});
+
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Sorry the page is not working, this is totally bad request'
